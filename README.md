@@ -1,3 +1,6 @@
+Intended to be deployed to dokku
+-------
+
 # Node MongoDB / S3 Backup
 
 This is a package that makes backing up your mongo databases to S3 simple.
@@ -48,7 +51,7 @@ you need it.
 ### Timezones
 
 The optional "timezone" allows you to specify timezone-relative time regardless
-of local timezone on the host machine. 
+of local timezone on the host machine.
 
       "cron": {
         "time": "00:00",
