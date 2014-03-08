@@ -222,7 +222,7 @@ function sendToS3(options, directory, target, callback) {
  * @param callback        callback(err)
  */
 function sync(mongodbConfig, s3Config, callback) {
-  var tmpDir = path.join(require('os').tmpDir(), 'mongodb_s3_backup')
+  var tmpDir = path.join('/tmp', 'mongodb_s3_backup')
     , backupDir = path.join(tmpDir, mongodbConfig.db)
     , archiveName = getArchiveName(mongodbConfig.db)
     , async = require('async');
