@@ -1,4 +1,4 @@
-module.exports = {
+var config = {
   mongodb: {
     host: process.env.MONGODB_HOST || "localhost",
     port: process.env.MONGODB_PORT || 27017,
@@ -16,3 +16,10 @@ module.exports = {
     crontab: process.env.CRONTAB || "0 0 * * *"
   }
 }
+
+if (!config.mongodb.db)  throw new Error('config mongodb.db required');
+if (!config.s3.key)      throw new Error('config s3.key required');
+if (!config.s3.secret)   throw new Error('config s3.secret required');
+if (!config.s3.bucket)   throw new Error('config s3.bucket required');
+
+module.exports = config;
