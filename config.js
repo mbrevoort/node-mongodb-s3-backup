@@ -4,7 +4,8 @@ var config = {
     port: process.env.MONGODB_PORT || 27017,
     username: process.env.MONGODB_USERNAME || false,
     password: process.env.MONGODB_PASSWORD || false,
-    db: process.env.MONGODB_DATABASE
+    db: process.env.MONGODB_DATABASE,
+    tmpDir: process.env.BACKUP_TMP_DIR || require('os').tmpDir()
   },
   s3: {
     key: process.env.S3_KEY,
